@@ -305,6 +305,21 @@ client.on("message", async message => {
     if (message.content === 'derek pesquisas') {
         message.reply('Ainda não tenho nenhuma ! ``<Provavelmente não foi feita pelo meu desenvolvedor!>``')
     }
+
+
+    if (message.content === 'derek pesquisa') {
+        message.reply('Ainda não tenho nenhuma ! ``<Provavelmente não foi feita pelo meu desenvolvedor!>``')
+    }
+
+
+    if (message.content === 'Derek pesquisas') {
+        message.reply('Ainda não tenho nenhuma ! ``<Provavelmente não foi feita pelo meu desenvolvedor!>``')
+    }
+
+
+    if (message.content === 'Derek pesquisa') {
+        message.reply('Ainda não tenho nenhuma ! ``<Provavelmente não foi feita pelo meu desenvolvedor!>``')
+    }
 })
 
 
@@ -325,6 +340,72 @@ client.on("message", async message => {
     if (message.content === 'Mostrar github') {
         message.reply(github)
     }
+})
+
+
+    /*
+
+    Desenbolo parte 2
+
+    */
+
+
+client.on("message", async message => {
+    if (message.content === 'Oque você esta fazendo?') {
+        message.reply('Estou fazendo aboslutamente nada, e você?')
+    }
+
+    if (message.content === 'oque você esta fazendo?') {
+        message.reply('Estou fazendo aboslutamente nada, e você?')
+    }
+
+    if (message.content === 'Esta fazendo algo de bom?') {
+        message.reply('Estou recebendo agora um novo uptade nos meus dados, nada de mais, e você?')
+    }
+
+    if (message.content === 'esta fazendo algo de bom?') {
+        message.reply('Estou recebendo agora um novo uptade nos meus dados, nada de mais, e você?')
+    }
+
+    if (message.content === 'oq faz de bom?') {
+        message.reply('Estou navegando pelos meus dados para ver se eu encontro algum erro! E você?')
+    }
+    
+    if (message.content === 'Oq faz de bom?') {
+        message.reply('Estou navegando pelos meus dados para ver se eu encontro algum erro! E você?')
+    }
+
+    if (message.content === 'Oq esta fznd de bm?') {
+        message.reply('Estou atoa neste momento!') 
+    }
+
+
+    
+    if (message.content === 'oq esta fznd de bm?') {
+        message.reply('Estou atoa neste momento!') 
+    }
+
+})
+
+    /*
+
+    Desenbolo parte2 v2
+
+    */
+
+client.on("message", async message => {
+    if (message.content === 'Estou fazendo nada') {
+        const { piscadinha_ } = require('./emojis')
+        message.reply('Estou normalmente gosto de não fazer nada ' + piscadinha_)
+    }
+
+    if (message.content === 'estou fazendo nada') {
+        const { piscadinha_ } = require('./emojis')
+        message.reply('Estou normalmente gosto de não fazer nada ' + piscadinha_)
+    }
+
+
+
 })
 
 client.login(config.token)
