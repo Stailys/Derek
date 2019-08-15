@@ -1,4 +1,4 @@
-const { Client, RichEmbed } = require('discord.js')
+﻿const { Client, RichEmbed } = require('discord.js')
 const config = require('../../private/config.json')
 const client = new Client()
 
@@ -62,7 +62,7 @@ client.on("message", async message => {
 
 
     
-})
+
 
 
 
@@ -74,9 +74,17 @@ client.on("message", async message => {
         */
 
 
-client.on("message", async message => {
+
     if (message.content  === 'Tudo bom?') {
         message.reply('Estou bem, e você?')
+    }
+
+    if (message.content  === 'Tudo bem?') {
+        message.reply('To de boa na lagoa, tranquilo com esquilo')
+    }
+
+    if (message.content  === 'tudo bem?') {
+        message.reply('To de boa na lagoa, tranquilo com esquilo')
     }
 
     if (message.content === 'tudo bom?') {
@@ -116,8 +124,14 @@ client.on("message", async message => {
         message.reply('Estou ótimo e vc?')
     }
 
-})
 
+    if (message.content === 'tudo bem com vc derek?') {
+        message.reply('Estou ótimo e vc?')
+    }
+
+    if (message.content === 'Tudo bem com vc derek?') {
+        message.reply('Estou ótimo e vc?')
+    }
 
     /*
 
@@ -126,7 +140,6 @@ client.on("message", async message => {
     */
 
 
-client.on("message", async message => {
     if (message.content === 'Estou bem') {
         message.reply('Que bom, posso te ajudar em alguma coisa?')
     }
@@ -191,7 +204,11 @@ client.on("message", async message => {
         message.reply('Relaxa, vamos seguir em frente !!')
     }
 
-})
+    /*
+
+    Continuação do bate-papo
+
+    */
 
 
     /*
@@ -200,9 +217,6 @@ client.on("message", async message => {
      const { ta } = require('../images/ta') 
 
     */
-
-client.on("message", async message => {
-
 
     if (message.content === 'Derek, painel') {
     const { Thumb_Inicial } = require('./img')
@@ -217,7 +231,6 @@ client.on("message", async message => {
     .setColor(P) 
     message.channel.send(iaE)
     }
-
 
     if (message.content === 'derek, painel') {
         const { Thumb_Inicial } = require('./img')
@@ -246,7 +259,6 @@ client.on("message", async message => {
         .setColor(P) 
         message.channel.send(iaER)
     }
-
 
     if (message.content === 'Mostrar painel de ajuda') {
         const { Thumb_Inicial } = require('./img')
@@ -291,17 +303,12 @@ client.on("message", async message => {
         message.channel.send(iaER)
     }
 
-
-})
-
     /*
 
     Informação
 
     */
 
-
-client.on("message", async message => {
     if (message.content === 'derek pesquisas') {
         message.reply('Ainda não tenho nenhuma ! ``<Provavelmente não foi feita pelo meu desenvolvedor!>``')
     }
@@ -320,7 +327,6 @@ client.on("message", async message => {
     if (message.content === 'Derek pesquisa') {
         message.reply('Ainda não tenho nenhuma ! ``<Provavelmente não foi feita pelo meu desenvolvedor!>``')
     }
-})
 
 
     /*
@@ -328,8 +334,6 @@ client.on("message", async message => {
     Github infos
 
     */
-
-client.on("message", async message => {
     
     const github = 'https://github.com/Stailys/Derek'
     
@@ -340,7 +344,6 @@ client.on("message", async message => {
     if (message.content === 'Mostrar github') {
         message.reply(github)
     }
-})
 
 
     /*
@@ -350,7 +353,6 @@ client.on("message", async message => {
     */
 
 
-client.on("message", async message => {
     if (message.content === 'Oque você esta fazendo?') {
         message.reply('Estou fazendo aboslutamente nada, e você?')
     }
@@ -385,15 +387,12 @@ client.on("message", async message => {
         message.reply('Estou atoa neste momento!') 
     }
 
-})
-
     /*
 
     Desenbolo parte2 v2
 
     */
 
-client.on("message", async message => {
     if (message.content === 'Estou fazendo nada') {
         const { piscadinha_ } = require('./emojis')
         message.reply('Estou normalmente gosto de não fazer nada ' + piscadinha_)
@@ -404,6 +403,64 @@ client.on("message", async message => {
         message.reply('Estou normalmente gosto de não fazer nada ' + piscadinha_)
     }
 
+
+
+    /*
+
+    Parte OWNEW
+
+    */
+})
+
+client.on("message", async message => {
+    
+    if (message.content === 'mostrar painel de desenvolvedor') {
+        
+        if (message.author.id !== '569328425186230283') {
+            let perm = new RichEmbed()
+            .setDescription('Você não tem a permissão suficiente para visualizar este painel !')
+            .setColor('BLACK')
+            message.channel.send(perm)
+            return
+        }
+
+        const { Thumb_Inicial } = require('./img')
+        let p = new RichEmbed()
+        .setTitle('PAINEL DO DESENVOLVEDOR!')
+        .addField('Completamento da I.A', 'máx: 40%')
+        .addField('Tradução?', 'Sem decisão tomada!')
+        .addField('Finalização do projeto:', 'sem data estimada')
+        .addField('Inspiração:', 'Estou sendo inspirado no jarvis, na versão discord !')
+        .setColor('BLACK')
+        .setImage(Thumb_Inicial)
+        message.channel.send(p)
+    }
+
+
+    if (message.conetent == 'derek, info') {
+        if (message.author.id !== '569328425186230283') {
+            let perm = new RichEmbed()
+            .setDescription('Você não tem a permissão suficiente para visualizar este painel !')
+            .setColor('BLACK')
+            message.channel.send(perm)
+            return
+        }
+
+        const { Thumb_Inicial } = require('./img')
+        let p = new RichEmbed()
+        .setTitle('PAINEL DO DESENVOLVEDOR!')
+        .addField('Completamento da I.A', 'máx: 40%')
+        .addField('Tradução?', 'Sem decisão tomada!')
+        .addField('Finalização do projeto:', 'sem data estimada')
+        .addField('Inspiração:', 'Estou sendo inspirado no jarvis, na versão discord !')
+        .setColor('BLACK')
+        .setImage(Thumb_Inicial)
+        message.channel.send(p)
+    }
+
+    if (message.content === 'upar code para git') {
+        message.channel.send('Estou upando agora meus codes ' + `<@569328425186230283>`)
+    }
 
 
 })
